@@ -1,0 +1,26 @@
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    vertical-align: middle;
+    padding-top: 20px;
+    margin-top: 40px;
+    background-color: rgb(29, 46, 71);
+    color:white
+  }
+
+  .log-in-input {
+    margin-bottom: 20px;
+    display: inline;
+  }
+
+  .log-in {
+      letter-spacing: 2.5px
+  }
+
+  .log-in-text {
+      letter-spacing: 1.5px;
+  }
