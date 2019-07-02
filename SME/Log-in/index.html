@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
-    <div>
+    <div style="margin-bottom: 20px">
         <ul id="navigation-bar">
             <div id="mySidebar" class="sidebar navigation-bar-item">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -21,13 +21,24 @@
             <div style="float: left" id="main">
                 <button class="openbtn navigation-text" onclick="openNav()">&#9776; </button> 
             </div>
-            <li class="navigation-bar-item"><a class="navigation-text" href="">Home</a></li>
+            <li class="navigation-bar-item"><a class="navigation-text" href="../index.html">Home</a></li>
             <li class="navigation-bar-item"><a class="navigation-text" href="">Feed</a></li>
             <li class="navigation-bar-item"><a class="navigation-text" href="">Explore</a></li>
             <li style="float: right" class="navigation-bar-item"><a href="" class="navigation-text"><i class="glyphicon glyphicon-bell"></i></a></li>
             <li style="float: right" class="navigation-bar-item"><a href="" class="navigation-text">Profile</a></li>
-            <li style="float: right" class="navigation-bar-item"><a href="Log-in/index.html" class="navigation-text">Log In</a></li>
-          </ul>
+            <li style="float: right" class="navigation-bar-item"><a href="index.html" class="navigation-text">Log In</a></li>
+        </ul>
     </div>
+    <hr class="line">
+    <div class="card">
+        <div class="log-in">Log In</div>
+        <div class="log-in-text">Username:</div>
+        <input class="log-in-input" type="text">
+        <div class="log-in-text">Password:</div>
+        <input type="text" class="log-in-input">
+        <hr style="margin-bottom: 20px">
+        <div class="log-in-text">Not a member? Sign up as a SME <a id="sign-up-link" href="../Sign-up-SME/index.html"><u>here</u></a> or as a funder <a id="sign-up-link" href=""><u>here</u></a></div>
+    </div>
+    <hr style="margin-top: 40px" class="line">
 </body>
 </html>
