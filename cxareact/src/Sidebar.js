@@ -1,55 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import './Sidebar.css';
+import React, {useState, useEffect} from 'react';
+import { Navbar, Nav, NavDropdown, Form, Button, FormControl } from 'react-bootstrap';
+import './Navbar.css';
 
 let Sidebar = (props) => {
-    return (
-      <div className='container-fluid' id='sideapp'>
-      {/* <!-- SideNav slide-out button --> */}
-        <a href="#" data-activates="slide-out" className="btn btn-primary p-3 button-collapse"><i
-            className="fas fa-bars"></i></a>
-  
-        {/* <!-- Sidebar navigation --> */}
-        <div id="slide-out" className="side-nav fixed">
-          <ul className="custom-scrollbar">
-            {/* <!-- Logo --> */}
-            {/* <li>
-              <div className="logo-wrapper waves-light">
-                <a href="#"><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png"
-                    className="img-fluid flex-center"></a>
-              </div>
-            </li> */}
-            {/*<!--Search Form--> */}
+  return (
+    <div style={{
+      boxSizing: 'box-border', 
+      fontFamily: 'Verdana'}}>
 
-              <form className="search-form" role="search">
-                <div className="form-group md-form mt-0 pt-1 waves-light">
-                  <input type="text" className="form-control" placeholder="Search"/>
-                </div>
-              </form>
+      <nav style={{
+        position: 'fixed', 
+        marginTop: '65px',
+        top: '0px',
+        right: '0px',
+        width: '250px',
+        height: '100%',
+        backgroundColor: '#f9f9f9'
+        }}>
+          <h3 className='text-center' style={{
+            margin: '10px',
+            paddingBottom: '10px',
+            borderBottom: '1px solid black'
+          }}>Contacts</h3>
+          <Form inline style={{
+            paddingRight: '15px',
+            paddingLeft: '15px',
+            paddingBottom: '15px',
+            paddingTop: '5px'
+          }}>
+            <FormControl type="text" placeholder="Search" id="mr-sm-2" />
+            <Button variant="outline-light">Search</Button>
+          </Form>
+      </nav>
+    </div>
+  )
+}
 
-            {/* <!--/.Search Form-->
-            <!-- Side navigation links --> */}
-            <li>
-              <ul className="collapsible collapsible-accordion">
-                <li><a className="collapsible-header waves-effect arrow-r"><i className="fas fa-chevron-right"></i>Chat<i className="fas fa-angle-down rotate-icon"></i></a>
-                  <div className="collapsible-body">
-                    <ul>
-                      <li><a href="#" className="waves-effect">Hawkers</a>
-                      </li>
-                      <li><a href="#" className="waves-effect">Investors</a>
-                      <li><a href="#">Mentors</a></li>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            {/* <!--/. Side navigation links --> */}
-          </ul>
-          <div className="sidenav-bg rgba-blue-strong"></div>
-        </div>
-        {/* <!--/. Sidebar navigation --> */}
-      </div>
-    )
-  }
-
-  export default Sidebar;
+export default Sidebar;
