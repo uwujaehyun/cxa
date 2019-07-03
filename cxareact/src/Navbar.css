@@ -1,7 +1,28 @@
 #hawker-nav {
   background-color: #009a7a;
+  color: #d8d8d8;
 }
 
-.nav-link {
+.hawker-title {
+  color: #d8d8d8;
+}
+
+.hawker-home {
+  color: #d8d8d8;
+}
+
+.hawker-action {
+  color: #d8d8d8;
+}
+
+.hawker-anoaction {
+  color: #d8d8d8;
+}
+
+.hawker-seplink {
+  color: #d8d8d8;
+}
+
+.hawker-something {
   color: #d8d8d8;
 }
