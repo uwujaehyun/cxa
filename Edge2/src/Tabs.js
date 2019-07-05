@@ -8,7 +8,8 @@ let HawkTabs = () => {
         <div className='shadow bg-white' style={{
             marginLeft: '168px', 
             marginTop: '50px', 
-            marginBottom: '200px'
+            marginBottom: '200px',
+            width: "85%"
         }}>
             <Tabs defaultActiveKey="profile" transition={false} className='container' id="uncontrolled-tab-example" style={{
             width: '1100px'
