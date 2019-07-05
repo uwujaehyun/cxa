@@ -11,7 +11,7 @@ let Chat = (props) => {
     let [ user, setUser ] = useState('Jerry')
 
     useEffect(() => {
-        socket.on('RECEIVE MESSAGE', function(data) {
+        socket.on('RECEIVE_MESSAGE', function(data) {
             console.log(data)
             if(data.user !== user) {
                 addResponseMessage(data.message);
@@ -24,7 +24,7 @@ let Chat = (props) => {
     })
 
     let handleNewUserMessage = (newMessage) => {
-        socket.emit('SEND MESSAGE', {
+        socket.emit('SEND_MESSAGE', {
             user: user,
             message: newMessage
         });
