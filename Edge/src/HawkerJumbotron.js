@@ -32,7 +32,7 @@ let HawkerJumbotron = (props) => {
                     width: '120px', 
                     height: 'auto',
                     marginRight: '100px',
-                    marginTop: '-70px',
+                    marginTop: '-60px',
                     float: 'right'
                 }} src={`${props.profilepic}`} alt={`${props.comname}`+ "'s profile picture"}/>
             </Jumbotron>

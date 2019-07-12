@@ -38,7 +38,9 @@ let PageRouter = (props) => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav id="mr-auto">
                 <Nav.Link id="hawker-home" ><Link to={'./HawkPage'} className={'nav-link'}>Home</Link></Nav.Link>
-                <NavDropdown title="Change User" id="basic-nav-dropdown">
+                <NavDropdown title="Change User" id="basic-nav-dropdown" style={{
+                  marginTop: '8px'
+                }}>
                   <NavDropdown.Item id="hawker-action"><Link to={'./InvestPage'} className={'nav-link'}>Investor</Link>
                   </NavDropdown.Item>
                   <NavDropdown.Divider />

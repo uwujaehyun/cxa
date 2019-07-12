@@ -52,11 +52,11 @@ let HawkPage = (props) => {
             marginTop: '500px', 
           }}>
       </HawkButton>
-      <HawkerJumbotron comname='Lorem Ipsum' 
+      <HawkerJumbotron comname="Swee Boon Keat's chicken rice" 
       profilepic={laksa} 
       role='Hawker'
       bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>
-      <Description description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex eveniet doloremque odit impedit totam cum, praesentium alias rem eos hic qui, architecto debitis delectus explicabo iure culpa perferendis id corporis quos quia placeat unde iusto cupiditate! Dolore neque doloremque fugiat, in dolorum alias, necessitatibus quas odio voluptatibus, laborum accusamus! Nulla impedit recusandae incidunt totam, quod fuga necessitatibus neque, distinctio voluptate iure culpa illo quae? Obcaecati, rem tenetur dolorem quo blanditiis, velit error fugit ut ex aut nobis, sunt dicta ab fuga reprehenderit soluta. Saepe voluptate, rem perspiciatis veniam minus accusamus quasi consectetur corrupti dicta delectus, eligendi laborum quas distinctio.'></Description>
+      <Description description='This stall has been running for almost seven decades. Running and maintaining a hawker stall is a family business which my parents had started in the 1950s. Surviving was tricky back then'></Description>
       <main style={{paddingRight: '250px'}}>
       <Button className='shadow bg-white' hawkdirect='./therealHawkPub.js' style={{
         border: '0px', 
