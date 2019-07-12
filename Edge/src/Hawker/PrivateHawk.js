@@ -2,7 +2,10 @@ import React from 'react';
 import InvestCard from '../Card.js'
 import ProfitChart from '../ProfitChart.js'
 
+
 let PrivateHawk = () => {
+
+
     return (
         <div>
             <h3 style={{

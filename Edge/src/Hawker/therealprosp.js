@@ -1,7 +1,7 @@
 import React from 'react';
 import Prospectus from 'Prospectus.js';
 
-let therealp = () => {
+let Therealp = () => {
     return (
         <div>
 
@@ -9,4 +9,4 @@ let therealp = () => {
     )
 }
 
-export deafult therealp;
+export default Therealp;

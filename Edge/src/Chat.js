@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'react-chat-widget/lib/styles.css';
 import './Chat.css';
-import { Widget, addResponseMessage } from 'react-chat-widget';
+import { Widget, addResponseMessage, toggleWidget } from 'react-chat-widget';
 import io from 'socket.io-client';
 
 let Chat = (props) => {
@@ -9,7 +9,7 @@ let Chat = (props) => {
   
     console.log(props.socket)
     let [ user, setUser ] = useState('Jerry')
-
+    // let [toggleWidget, setToggleWidget] = useState(false)
     useEffect(() => {
         props.socket.on('RECEIVE_MESSAGE', function(data) {
             console.log(data)
@@ -20,6 +20,16 @@ let Chat = (props) => {
 
     }, []
     )
+
+    useEffect(()=>{
+        props.socket.on('TRIGGER', function(data) {
+          
+        //   setToggleWidget(true)
+          toggleWidget()
+        });
+    
+      }, [])
+      
 
     let handleNewUserMessage = (newMessage) => {
         props.socket.emit('SEND_MESSAGE', {

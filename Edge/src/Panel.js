@@ -14,14 +14,18 @@ import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom
         
             if (reDirect) {
             
-            return <Redirect push to={`${props.link}`}></Redirect>
+            return <Redirect push to={`${props.smepage}`}></Redirect>
             } else {
 
             return (
-                <div id={props.id} className={props.className} style={{marginBottom:"30px"}}>
+                <div id={props.id} className={props.className} style={{marginRight: '60px'}}>
                     <div style={{
-                        width: '97%', 
-                        height: '240px'
+                        // width: '97%', 
+                        height: '240px', 
+                        backgroundColor: 'white', 
+                        borderTop: '1px solid lightgrey', 
+                        borderBotom: '1px solid lightgrey', 
+                        padding: '20px'
                     }}>
                         <img src={`${props.hawkprofpic}`} alt="Hawker's profile picture" style={{
                             width: '220px', 
@@ -40,7 +44,7 @@ import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom
                             float: 'right', 
                             backgroundColor: '#009a7a', 
                             border: '0', 
-                            marginTop: '-55px', 
+                            marginTop: '40px', 
                         }}
                             onClick={handleClick}>
                             See page</Button>

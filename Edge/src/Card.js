@@ -1,7 +1,16 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-
+import io from 'socket.io-client';
 let InvestCard = (props) => {
+    let mainSocket = io('localhost:8080')
+
+    let handleChange = () => {
+        console.log(mainSocket)
+        mainSocket.emit('TRIGGER_TAB', {
+            x:"emit"
+        });
+    }
+
     return (
         <div>
             <Card style={{ width: '14rem' }}>
@@ -11,7 +20,7 @@ let InvestCard = (props) => {
                 <Card.Text>
                 {`$${props.amount}`}
                 </Card.Text>
-                <Button style={{
+                <Button onClick={handleChange} style={{
                     backgroundColor: '#009a7a', 
                     border: '0px'
                 }}>Contact</Button>

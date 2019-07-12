@@ -10,10 +10,26 @@ import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom
 import { Button } from 'react-bootstrap';
 import HawkButton from './HawkButton.js';
 import therealHawkPub from './therealHawkPub.js';
+import { TransactionContract } from "../setup";
 
 let HawkPage = (props) => {
 
-  let mainSocket = io('http://192.168.1.19.:8080')
+  let mySocket = io('localhost:8080')
+
+  
+  useEffect(()=>{
+    // (hawkers => hawkers.map(
+    //     (el)=>{
+    //         let displayAmount=TransactionContract.totalAmountFor(el.name).toNumber()
+    //         return Object.assign({},el,{amount:displayAmount})
+    //     }
+      
+      // ))
+  },[])
+
+
+  
+
 
   let [reDirect, setreDirect] = useState(false)
 
@@ -21,7 +37,7 @@ let HawkPage = (props) => {
     setreDirect(true)
   }
 
-  let [directState , setreDirectState] = useState("./therealHawkPub")
+  let [directState , setreDirectState] = useState('')
   
     if (reDirect) {
       return <Redirect push to={`${directState}`}></Redirect>
@@ -48,7 +64,7 @@ let HawkPage = (props) => {
         marginLeft: '1032px', 
         marginTop: '-88px'
       }} onClick={() => {
-        let directState = setreDirectState('therealHawkPub')
+        let directState = setreDirectState('TherealHawkPub')
         let reDirect = setreDirect(true)
       }}>See your account's page</Button>
           <Button className='btn shadow bg-white' style={{
@@ -75,7 +91,7 @@ let HawkPage = (props) => {
         <HawkTabs style={{
           width: '1100px'
         }}></HawkTabs>
-        <Chat socket={mainSocket} contactname='Jerry' contactrole='Investor'></Chat>
+        <Chat socket={mySocket} contactname='Jerry' contactrole='Investor'></Chat>
       </main>
       </div>
       </div>

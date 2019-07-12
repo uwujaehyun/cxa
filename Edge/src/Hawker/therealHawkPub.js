@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import * as firebase from 'firebase/app';
 // import firebaseConfig from '../firebaseconfig.js';
 import { StreamApp, NotificationDropdown, FlatFeed, Activity, LikeButton, StatusUpdateForm,CommentField,CommentList } from 'react-activity-feed';
@@ -7,10 +7,27 @@ import HawkerJumbotron from '../HawkerJumbotron.js';
 import laksa from '../assets/laksa2.jpg';
 import Description from '../Description.js';
 import { Button } from 'react-bootstrap';
+import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom';
+import io from 'socket.io-client';
+
 
 // firebase.initializeApp(firebaseConfig);
 
-let therealHawkPub = () => {
+let TherealHawkPub = () => {
+
+    let mainSocket = io('http://192.168.1.19.:8080')
+
+    let [reDirect, setreDirect] = useState(false)
+
+    let handleClick = () => {
+        setreDirect(true)
+    }
+
+    let [directState , setreDirectState] = useState('')
+    
+        if (reDirect) {
+        return <Redirect push to={`${directState}`}></Redirect>
+        } else {
 
 
     return (
@@ -24,24 +41,27 @@ let therealHawkPub = () => {
                 color: '#313131', 
                 marginLeft: '1032px', 
                 marginTop: '-430px'
+            }} onClick={() => {
+                let directState = setreDirectState('../Transaction')
+                let reDirect = setreDirect(true)
             }}>Fund</Button>
             <Button className='shadow bg-white' style={{
                 border: '0px', 
                 color: '#313131', 
                 marginLeft: '1032px', 
-                marginTop: '-339px'
+                marginTop: '-356px'
             }}>Invest</Button>
             <Button className='shadow bg-white' style={{
                 border: '0px', 
                 color: '#313131', 
                 marginLeft: '1032px', 
-                marginTop: '-248px'
+                marginTop: '-283px'
             }}>Contact</Button>
             <Button className='shadow bg-white' style={{
                 border: '0px', 
                 color: '#313131', 
                 marginLeft: '1032px', 
-                marginTop: '-157px'
+                marginTop: '-210px'
             }}>View Prospectus</Button>
             <div style={{
                 width: '1100px', 
@@ -82,6 +102,7 @@ let therealHawkPub = () => {
            
     </div>
     )
+                    }
 }
 
-export default therealHawkPub;
+export default TherealHawkPub;

@@ -6,7 +6,7 @@ import {ShowTransactions } from "./ShowTransactions";
 
 function Transaction (props) {
   
-    let [hawkers , setHawkers] = useState([{name:'Dolor Sit',amount:0}, {name:'Jerry',amount:0}, {name:'Larry',amount:0}, {name:'Barry',amount:0}])
+    let [hawkers , setHawkers] = useState([{name:'Lorem Ipsum',amount:0}, {name:'Amet Consectetur',amount:0}, {name:'Adipisicing Elit',amount:0}, {name:'Delectus Ipsam',amount:0}, {name:'Voluptate Inventore',amount:0}])
    
     useEffect(()=>{
         setHawkers(hawkers => hawkers.map(
