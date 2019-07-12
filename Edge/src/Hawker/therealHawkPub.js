@@ -23,7 +23,25 @@ let therealHawkPub = () => {
                 border: '0px', 
                 color: '#313131', 
                 marginLeft: '1032px', 
-                marginTop: '-66leapx'
+                marginTop: '-430px'
+            }}>Fund</Button>
+            <Button className='shadow bg-white' style={{
+                border: '0px', 
+                color: '#313131', 
+                marginLeft: '1032px', 
+                marginTop: '-339px'
+            }}>Invest</Button>
+            <Button className='shadow bg-white' style={{
+                border: '0px', 
+                color: '#313131', 
+                marginLeft: '1032px', 
+                marginTop: '-248px'
+            }}>Contact</Button>
+            <Button className='shadow bg-white' style={{
+                border: '0px', 
+                color: '#313131', 
+                marginLeft: '1032px', 
+                marginTop: '-157px'
             }}>View Prospectus</Button>
             <div style={{
                 width: '1100px', 

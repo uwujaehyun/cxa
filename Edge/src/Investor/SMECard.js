@@ -13,12 +13,19 @@ let InvestCard = (props) => {
                 </Card.Text>
                 <Button className='inline' style={{
                     backgroundColor: '#009a7a', 
-                    border: '0px'
+                    border: '0px', 
+                    margin: '5px'
                 }}>Contact</Button>
                 <Button className='inline' style={{
                     backgroundColor: '#009a7a', 
                     border: '0px', 
+                    margin: '5px'
                 }}>View Profits</Button>
+                <Button className='inline' style={{
+                    backgroundColor: '#009a7a', 
+                    border: '0px', 
+                    margin: '5px'
+                }}>View Page</Button>
             </Card.Body>
             </Card>
         </div>

@@ -10,7 +10,9 @@ import HawkOpp from './Hawker/HawkOpp';
 import InvestProf from './Investor/InvestProf';
 import therealHawkPub from './Hawker/therealHawkPub';
 import HawkPub from './Hawker/HawkPub';
-
+import laksa from './assets/laksa2.jpg';
+import Panel from './Panel.js';
+import Transaction from './Transaction';
 
 let PageRouter = (props) => {
 
@@ -31,7 +33,7 @@ let PageRouter = (props) => {
           <Navbar expand="lg" id="hawker-nav" style={ { position: 'fixed', width: '100%', zIndex:500} }>
             <Navbar.Brand id="hawker-title"><Link to='/' className='nav-link' style={{
               color: '#313131'
-            }}>Edge</Link></Navbar.Brand>
+            }}>Uplift</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav id="mr-auto">
@@ -42,28 +44,22 @@ let PageRouter = (props) => {
                   <NavDropdown.Divider />
                   <NavDropdown.Item id="hawker-seplink"><Link to={'./HawkPage'} className={'nav-link'}>Hawker</Link></NavDropdown.Item>
                   </NavDropdown>
+                  <Nav.Link id="hawker-transaction" ><Link to={'./Transaction'} className={'nav-link'}>Offer</Link></Nav.Link>
               </Nav>
-              <Form inline className='ml-auto' style={{
-                display: 'flex',
-                justifyContent: 'center'
-              }}>
-                <FormControl type="text" placeholder="Search" id="mr-sm-2" />
-                <Button variant="outline-light" onClick={(() => {
-
-                })}>Search</Button>
-              </Form>
             </Navbar.Collapse>
           </Navbar>
-          {/* <div> */}
+          
           <Route path='/' exact component={HawkPage} stylesheet="Hawker"/>
           <Route path='/HawkPage' component={HawkPage} stylesheet="Hawker"/>
           <Route path='/InvestPage' component={InvestPage} stylesheet="Investor"/>
           <Route path='/HawkOpp' component={HawkOpp} stylesheet="HawkOpp"/>
           <Route path='/InvestProf' component={InvestProf} stylesheet="InvestProf"/>
           <Route path='/therealHawkPub' component={therealHawkPub} stylesheet="therealHawkPub"/>
-          <Route path='/InvestOpp' component={InvestOpp} stylesheet="InvestOpp"/>
+          <Route path='/InvestOpp' render={(props)=><InvestOpp {...props} hawkerstalls={[{name: 'Lorem Ipsum', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: './therealHawkPub' }, {name: 'Amet Consectetur', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null }, {name: 'Adipisicing Elit', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}, {name: 'Delectus Ipsam', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}, {name: 'Voluptate Inventore', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}]}/>} stylesheet="InvestOpp"/>
           <Route path='/HawkPub' component={HawkPub} stylesheet="HawkPub"/>
-          {/* </div> */}
+          <Route path="/Transaction" component={Transaction} stylesheet="Transaction"/>
+          {/* <Route path='/testup' render={(props)=><Testup {...props} people={[{first: 'Sarah', last: 'Johnson', age: 25, id: 'a1'}, { first: 'Caldwell', last: 'Thompson', age: 32, id: 'b2'}, { first: 'Hart', last: 'Maynard', age: 12, id: 'c3'}, { first: 'Demetrius', last: 'McGregor', age: 55, id: 'd4'} ]} />} stylesheet="testup"/> */}
+        
           </div>
         </Router>
         

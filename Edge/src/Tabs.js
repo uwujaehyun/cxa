@@ -4,6 +4,7 @@ import PublicHawk from './Hawker/PublicHawk.js';
 import PrivateHawk from './Hawker/PrivateHawk.js';
 import FundsHawk from './Hawker/FundsHawk.js';
 import Prospectus from './Hawker/Prospectus.js';
+import Offers from './Offers.js';
 
 let HawkTabs = (props) => {
     return (
@@ -34,6 +35,12 @@ let HawkTabs = (props) => {
                 width: '1100px'
             }}>
                 <Prospectus />
+            </Tab>
+            <Tab eventKey="offers" title='Offers' className='container' style={{ 
+                color: '#4b4b4b', 
+                width: '1100px'
+            }}>
+                <Offers />
             </Tab>
             </Tabs>
         </div>

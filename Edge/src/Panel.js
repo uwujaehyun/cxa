@@ -6,18 +6,19 @@ import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom
     let Panel = (props) => {
 
         let [reDirect, setreDirect] = useState(false)
-
+        console.log(props)
         let handleClick = () => {
             setreDirect(true)
         }
 
         
             if (reDirect) {
-            return <Redirect push to={`${props.smepage}`}></Redirect>
+            
+            return <Redirect push to={`${props.link}`}></Redirect>
             } else {
 
             return (
-                <div id={props.id} className={props.className}>
+                <div id={props.id} className={props.className} style={{marginBottom:"30px"}}>
                     <div style={{
                         width: '97%', 
                         height: '240px'
@@ -42,7 +43,7 @@ import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom
                             marginTop: '-55px', 
                         }}
                             onClick={handleClick}>
-                            See {props.abc}</Button>
+                            See page</Button>
                     </div>
                 </div>
             )

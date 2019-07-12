@@ -6,8 +6,35 @@ import './Contacts.css';
 
 // import React from "react";
 
+const contacts = [{
+  name: 'Jerry', 
+  id: 1
+}, {
+  name: 'Larry', 
+  id: 2
+}, {
+  name: 'Barry', 
+  id: 3
+}]
+
 
  function Contacts ( props ) {
+
+  let [contact, setContact] = useState(props.contact)
+
+  let [term, setTerm] = useState('')
+
+  let searchingFor = () => {
+      return (x) => {
+          return x.name.toLowerCase().includes(term.toLowerCase()) || !term
+      }
+  }
+
+  let searchHandler = (e) => {
+      setTerm(e.target.value)
+ 
+  }
+
   return (
     // Pass on our props
     <Menu right {...props}>
@@ -35,25 +62,13 @@ import './Contacts.css';
               <FormControl type="text" placeholder="Search" id="mr-sm-2" />
               <Button variant="outline-success">Search</Button>
             </Form>
-            <ul>
+            <ul key={contacts.id}>
               <button style={{
                 width: '100%', 
                 backgroundColor: '#f9f9f9', 
                 borderRight: '0', 
                 borderLeft: '0'
-              }} id='firstbutton'>{props.contactname}</button>
-              <button style={{
-                width: '100%', 
-                backgroundColor: '#f9f9f9', 
-                borderRight: '0', 
-                borderLeft: '0'
-              }} className='normalbutton'>{props.contactname2}</button>
-              <button style={{
-                width: '100%', 
-                backgroundColor: '#f9f9f9',
-                borderRight: '0', 
-                borderLeft: '0' 
-              }} id='lastbutton'>{props.contactname3}</button>
+              }} id='firstbutton'>{contacts.name}</button>
             </ul>
         </nav>
 
