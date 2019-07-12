@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import io from 'socket.io-client';
 let InvestCard = (props) => {
+    
     let mainSocket = io('localhost:8080')
 
     let handleChange = () => {

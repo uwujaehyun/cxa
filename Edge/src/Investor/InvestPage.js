@@ -11,7 +11,7 @@ import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom
 
 let InvestPage = (props) => {
 
-  let mainSocket = io('http://192.168.1.19.:8080')
+  let mainSocket = io('localhost:8080')
 
   let [reDirect, setreDirect] = useState(false)
 

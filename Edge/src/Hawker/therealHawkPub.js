@@ -15,7 +15,7 @@ import io from 'socket.io-client';
 
 let TherealHawkPub = () => {
 
-    let mainSocket = io('http://192.168.1.19.:8080')
+    let mainSocket = io('localhost:8080')
 
     let [reDirect, setreDirect] = useState(false)
 

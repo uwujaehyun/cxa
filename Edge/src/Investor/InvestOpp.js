@@ -4,7 +4,6 @@ import laksa from "../assets/laksa2.jpg";
 import Chat from '../Chat.js';
 import io from 'socket.io-client';
 // import './Opp.css';
-import './custom.scss';
 import Panel from '../Panel.js';
 import { Form, FormControl, Button } from 'react-bootstrap';
 import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom';
@@ -12,7 +11,7 @@ import therealHawkPub from '../Hawker/therealHawkPub.js';
 
 let InvestOpp = (props) => {
 
-  let mainSocket = io('http://192.168.1.19.:8080')
+  let mainSocket = io('localhost:8080')
 
   let [hawkerstalls, setHawkerStalls] = useState(props.hawkerstalls)
 
