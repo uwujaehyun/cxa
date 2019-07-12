@@ -17,5 +17,10 @@ io.on('connection', (socket) => {
         console.log(socket.id)
         io.emit('RECEIVE_MESSAGE', data);
     })
+    socket.on('TRIGGER_TAB', function(data){
+        console.log(data,".")
+        console.log(socket.id)
+        io.emit('TRIGGER', data);
+    })
 });
 
