@@ -6,6 +6,10 @@ contract Transaction {
   */
   
   mapping (bytes32 => uint64) public amountReceived;
+  mapping (bytes32 => uint64) public duration;
+  mapping (bytes32 => uint64) public returnValue;
+  mapping (bytes32 => string) public frequency;
+
   
   /* We will use an array of bytes32 to store the list of users
   */
@@ -21,7 +25,7 @@ contract Transaction {
   }
 
   // This function returns the total amount a user has received so far
-  function totalAmountFor(bytes32 user) view public returns (uint64) {
+  function totalAmountFor(bytes32 user) public view returns (uint64) {
     return amountReceived[user];
   }
 
@@ -29,4 +33,29 @@ contract Transaction {
   function setAmount(bytes32 user, uint64 amount) public {
     amountReceived[user] += amount;
   }
+
+  function setFrequency(bytes32 user, string memory freq) public {
+    frequency[user] = freq;
+  }
+
+  function getFrequency(bytes32 user) public view returns (string memory) {
+    return frequency[user];
+  }
+
+  function setDuration(bytes32 user, uint64 dura) public {
+    duration[user] = dura;
+  }
+
+  function getDuration(bytes32 user) public view returns (uint64) {
+    return duration[user];
+  }
+
+  function setReturnValue(bytes32 user, uint64 returnVal) public {
+    returnValue[user] = returnVal;
+  }
+
+  function getReturnValue(bytes32 user) public view returns (uint64) {
+    return returnValue[user];
+  }
+ 
 }

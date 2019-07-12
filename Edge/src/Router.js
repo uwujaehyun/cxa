@@ -13,7 +13,7 @@ import HawkPub from './Hawker/HawkPub';
 import laksa from './assets/laksa2.jpg';
 import Panel from './Panel.js';
 import Transaction from './Transaction';
-
+import Invest from './Invest'
 let PageRouter = (props) => {
 
     let mainSocket = io('localhost:8080')
@@ -57,6 +57,7 @@ let PageRouter = (props) => {
           <Route path='/InvestOpp' render={(props)=><InvestOpp {...props} hawkerstalls={[{name: 'Lorem Ipsum', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: './therealHawkPub' }, {name: 'Amet Consectetur', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null }, {name: 'Adipisicing Elit', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}, {name: 'Delectus Ipsam', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}, {name: 'Voluptate Inventore', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}]}/>} stylesheet="InvestOpp"/>
           <Route path='/HawkPub' component={HawkPub} stylesheet="HawkPub"/>
           <Route path="/Transaction" component={Transaction} stylesheet="Transaction"/>
+          <Route path="/Invest" component={Invest} stylesheet="Invest"/>
           {/* <Route path='/testup' render={(props)=><Testup {...props} people={[{first: 'Sarah', last: 'Johnson', age: 25, id: 'a1'}, { first: 'Caldwell', last: 'Thompson', age: 32, id: 'b2'}, { first: 'Hart', last: 'Maynard', age: 12, id: 'c3'}, { first: 'Demetrius', last: 'McGregor', age: 55, id: 'd4'} ]} />} stylesheet="testup"/> */}
         
           </div>
