@@ -48,15 +48,11 @@ let HawkPage = (props) => {
       <div>
       <Contacts pageWrapId={"page-wrap"} outerContainerId={"App"} contactname='Jerry' contactname2='Larry' contactname3='Barry'/>
       <div id="page-wrap">
-      <HawkButton hawkdirect='./HawkPub' alttitle='Add Post icon' buttonimg='https://cdn4.iconfinder.com/data/icons/ios7-essence/22/add_plus-512.png' style={{
-            marginTop: '500px', 
-          }}>
-      </HawkButton>
       <HawkerJumbotron comname="Swee Boon Keat's chicken rice" 
       profilepic={laksa} 
       role='Hawker'
       bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>
-      <Description description='This stall has been running for almost seven decades. Running and maintaining a hawker stall is a family business which my parents had started in the 1950s. Surviving was tricky back then'></Description>
+      <Description description='This stall has been running for almost seven decades. Running and maintaining a hawker stall is a family business which my parents had started in the 1950s when hawker centres started to appear on the streets of Singapore. The reason I am this is skilled is because my parents taught me how to cook chicken rice as they do as I was growing up, and I have taught my children how to cook chicken rice professionally like my parents before me. We sell chicken rice at $2.70, '></Description>
       <main style={{paddingRight: '250px'}}>
       <Button className='shadow bg-white' hawkdirect='./therealHawkPub.js' style={{
         border: '0px', 
