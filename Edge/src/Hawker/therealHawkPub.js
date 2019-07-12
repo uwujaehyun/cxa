@@ -50,7 +50,9 @@ let TherealHawkPub = () => {
                 color: '#313131', 
                 marginLeft: '1032px', 
                 marginTop: '-356px'
-            }}>Invest</Button>
+            } } onClick={() => {
+                let directState = setreDirectState('../Invest')
+                let reDirect = setreDirect(true)}}>Invest</Button>
             <Button className='shadow bg-white' style={{
                 border: '0px', 
                 color: '#313131', 

@@ -53,7 +53,7 @@ export let ShowTransactions = (props) => {
             <td >{hawker.name}</td>
             <td><input onChange={inputChangeHandler(i)} value={inputArray[i]}></input></td>
             <td>{hawker.amount*conversionRates[userCurrencies[i]]} {userCurrencies[i]}</td>
-            <td> <Dropdown> <Dropdown.Toggle variant="info" id="dropdown-basic">{userCurrencies[i]}</Dropdown.Toggle><Dropdown.Menu>{currencies.map( item => <Dropdown.Item onSelect={selectHandler(i)}>{item}</Dropdown.Item>)}</Dropdown.Menu></Dropdown></td>
+            <td> <Dropdown> <Dropdown.Toggle variant="info" id="dropdown-basic">{userCurrencies[i]}</Dropdown.Toggle><Dropdown.Menu>{currencies.map( (item,i) => <Dropdown.Item key={i} onSelect={selectHandler(i)}>{item}</Dropdown.Item>)}</Dropdown.Menu></Dropdown></td>
             <td> <button  onClick={handleChange.bind(this,hawker.name,i)}> Offer </button></td>
         </tr>)
 
@@ -65,7 +65,7 @@ export let ShowTransactions = (props) => {
                 <tbody>
                     <tr>
                         <th>Hawkers</th>
-                        <th>Amount to Invest</th>
+                        <th>Amount to Invest (in SGD)</th>
                         <th>Amount Invested </th> 
                         <th> Currency</th>
                     </tr>
