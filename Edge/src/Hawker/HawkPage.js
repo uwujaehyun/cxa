@@ -48,15 +48,11 @@ let HawkPage = (props) => {
       <div>
       <Contacts pageWrapId={"page-wrap"} outerContainerId={"App"} contactname='Jerry' contactname2='Larry' contactname3='Barry'/>
       <div id="page-wrap">
-      <HawkButton hawkdirect='./HawkPub' alttitle='Add Post icon' buttonimg='https://cdn4.iconfinder.com/data/icons/ios7-essence/22/add_plus-512.png' style={{
-            marginTop: '500px', 
-          }}>
-      </HawkButton>
-      <HawkerJumbotron comname='Lorem Ipsum' 
+      <HawkerJumbotron comname="Swee Boon Keat's chicken rice" 
       profilepic={laksa} 
       role='Hawker'
       bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>
-      <Description description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex eveniet doloremque odit impedit totam cum, praesentium alias rem eos hic qui, architecto debitis delectus explicabo iure culpa perferendis id corporis quos quia placeat unde iusto cupiditate! Dolore neque doloremque fugiat, in dolorum alias, necessitatibus quas odio voluptatibus, laborum accusamus! Nulla impedit recusandae incidunt totam, quod fuga necessitatibus neque, distinctio voluptate iure culpa illo quae? Obcaecati, rem tenetur dolorem quo blanditiis, velit error fugit ut ex aut nobis, sunt dicta ab fuga reprehenderit soluta. Saepe voluptate, rem perspiciatis veniam minus accusamus quasi consectetur corrupti dicta delectus, eligendi laborum quas distinctio.'></Description>
+      <Description description='This stall has been running for almost seven decades. Running and maintaining a hawker stall is a family business which my parents had started in the 1950s when hawker centres started to appear on the streets of Singapore. The reason I am this is skilled is because my parents taught me how to cook chicken rice as they do as I was growing up, and I have taught my children how to cook chicken rice professionally like my parents before me. We sell chicken rice at $2.70, '></Description>
       <main style={{paddingRight: '250px'}}>
       <Button className='shadow bg-white' hawkdirect='./therealHawkPub.js' style={{
         border: '0px', 

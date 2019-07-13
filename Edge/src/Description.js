@@ -5,7 +5,7 @@ let Description = (props) => {
     return (
         <div className='shadow bg-white' style={{
             width: '800px', 
-            height: 'auto', 
+            height: '220px', 
             backgroundColor: 'white', 
             padding: '25px', 
             borderRadius: '5px', 
