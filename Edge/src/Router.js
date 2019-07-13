@@ -13,10 +13,12 @@ import HawkPub from './Hawker/HawkPub';
 import laksa from './assets/laksa2.jpg';
 import Panel from './Panel.js';
 import Transaction from './Transaction';
-import Invest from './Invest'
+import Invest from './Invest';
+import sbkpic from './assets/sbkpic.jpg';
+
 let PageRouter = (props) => {
 
-    let mainSocket = io('localhost:8080')
+    let mainSocket = io('http://10.143.74.5:8080')
     
     // let [userState , setUserState] = useState("Hawker")
     
@@ -32,14 +34,17 @@ let PageRouter = (props) => {
         
           <Navbar expand="lg" id="hawker-nav" style={ { position: 'fixed', width: '100%', zIndex:500} }>
             <Navbar.Brand id="hawker-title"><Link to='/' className='nav-link' style={{
-              color: '#313131'
-            }}>Uplift</Link></Navbar.Brand>
+              color: 'white'
+            }}>UpLift</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav id="mr-auto">
-                <Nav.Link id="hawker-home" ><Link to={'./HawkPage'} className={'nav-link'}>Home</Link></Nav.Link>
-                <NavDropdown title="Change User" id="basic-nav-dropdown" style={{
-                  marginTop: '8px'
+                <Nav.Link id="hawker-home"><Link to={'./HawkPage'} className={'nav-link'} style={{
+                  color: '#b0b0b0'
+                }}>Home</Link></Nav.Link>
+                <NavDropdown id='raindrop' title="Change User" id="basic-nav-dropdown" style={{
+                  marginTop: '8px', 
+                  color: '#b0b0b0'
                 }}>
                   <NavDropdown.Item id="hawker-action"><Link to={'./InvestPage'} className={'nav-link'}>Investor</Link>
                   </NavDropdown.Item>
@@ -56,7 +61,7 @@ let PageRouter = (props) => {
           <Route path='/HawkOpp' component={HawkOpp} stylesheet="HawkOpp"/>
           <Route path='/InvestProf' component={InvestProf} stylesheet="InvestProf"/>
           <Route path='/TherealHawkPub' component={TherealHawkPub} stylesheet="TherealHawkPub"/>
-          <Route path='/InvestOpp' render={(props)=><InvestOpp {...props} hawkerstalls={[{name: 'Lorem Ipsum', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: './therealHawkPub' }, {name: 'Amet Consectetur', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null }, {name: 'Adipisicing Elit', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}, {name: 'Delectus Ipsam', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}, {name: 'Voluptate Inventore', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}]}/>} stylesheet="InvestOpp"/>
+          <Route path='/InvestOpp' render={(props)=><InvestOpp {...props} hawkerstalls={[{name: "Swee Boon Keat's chicken rice", pic: sbkpic, hdescription: '', link: './therealHawkPub' }, {name: 'Amet Consectetur', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null }, {name: 'Adipisicing Elit', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}, {name: 'Delectus Ipsam', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}, {name: 'Voluptate Inventore', pic: laksa, hdescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. uos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.', link: null}]}/>} stylesheet="InvestOpp"/>
           <Route path='/HawkPub' component={HawkPub} stylesheet="HawkPub"/>
           <Route path="/Transaction" component={Transaction} stylesheet="Transaction"/>
           <Route path="/Invest" component={Invest} stylesheet="Invest"/>

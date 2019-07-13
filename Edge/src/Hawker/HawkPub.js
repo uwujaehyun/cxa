@@ -13,8 +13,6 @@ import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom
 
 let HawkPub = () => {
 
-    let mainSocket = io('http://192.168.1.19.:8080')
-
     let [reDirect, setreDirect] = useState(false)
 
     let handleClick = () => {
@@ -78,7 +76,6 @@ let HawkPub = () => {
                         }
                     />
                 </StreamApp>
-                <Chat socket={mainSocket} contactname='Jerry' contactrole='Investor'></Chat>
       </div>
   
 

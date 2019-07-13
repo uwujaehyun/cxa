@@ -22,7 +22,7 @@ let HawkerJumbotron = (props) => {
                 <h1 style={{
                     display: 'flex',
                     alignItems: 'center',
-                    fontSize: '72px', 
+                    fontSize: '60px', 
                     marginTop: '50px'
                 }}><span className='align-middle'>{props.comname}</span></h1>
                 <h3>{props.role}</h3>

@@ -8,7 +8,7 @@ import Panel from '../Panel.js';
 
 let HawkOpp = (props) => {
 
-  let mainSocket = io('http://192.168.1.19.:8080')
+  let mainSocket = io('http://10.143.74.5:8080')
   return (
     <div style={{boxSizing: 'border-box', fontFamily: 'Verdana', backgroundColor: '#f6f6f6'}}>
       <div style={{

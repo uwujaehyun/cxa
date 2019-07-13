@@ -9,18 +9,27 @@ import Description from '../Description.js';
 import { Button } from 'react-bootstrap';
 import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom';
 import io from 'socket.io-client';
+import Chat from '../Chat.js';
+
 
 
 // firebase.initializeApp(firebaseConfig);
 
 let TherealHawkPub = () => {
 
-    let mainSocket = io('localhost:8080')
+    let mainSocket = io('http://10.143.74.5:8080')
 
     let [reDirect, setreDirect] = useState(false)
 
     let handleClick = () => {
         setreDirect(true)
+    }
+
+    let handleChange = () => {
+        console.log(mainSocket)
+        mainSocket.emit('TRIGGER_TAB', {
+            x:"emit"
+        });
     }
 
     let [directState , setreDirectState] = useState('')
@@ -32,8 +41,8 @@ let TherealHawkPub = () => {
 
     return (
         <div style={{boxSizing: 'border-box', fontFamily: 'Verdana', backgroundColor: '#f6f6f6',zIndex: 0, position: 'relative',paddingTop:"90px"}}>
-            <HawkerJumbotron comname='Lorem Ipsum' role='Hawker' profilepic={laksa} bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>  
-            <Description description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex eveniet doloremque odit impedit totam cum, praesentium alias rem eos hic qui, architecto debitis delectus explicabo iure culpa perferendis id corporis quos quia placeat unde iusto cupiditate! Dolore neque doloremque fugiat, in dolorum alias, necessitatibus quas odio voluptatibus, laborum accusamus! Nulla impedit recusandae incidunt totam, quod fuga necessitatibus neque, distinctio voluptate iure culpa illo quae? Obcaecati, rem tenetur dolorem quo blanditiis, velit error fugit ut ex aut nobis, sunt dicta ab fuga reprehenderit soluta. Saepe voluptate, rem perspiciatis veniam minus accusamus quasi consectetur corrupti dicta delectus, eligendi laborum quas distinctio.'>
+            <HawkerJumbotron comname="Swee Boon Keat's chicken rice" role='Hawker' profilepic={laksa} bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>  
+            <Description description='This stall has been running for almost seven decades. Running and maintaining a hawker stall is a family business which my parents had started in the 1950s when hawker centres started to appear on the streets of Singapore. The reason I am this is skilled is because my parents taught me how to cook chicken rice as they do as I was growing up, and I have taught my children how to cook chicken rice professionally like my parents before me. We sell chicken rice at $2.70, steamed vegetables at $3.00, almond milk at $0.90, barley drink at $0.70, milo at $1.30, sugarcane drink at $1.10'>
 
             </Description>
             <Button className='shadow bg-white' style={{
@@ -58,7 +67,7 @@ let TherealHawkPub = () => {
                 color: '#313131', 
                 marginLeft: '1032px', 
                 marginTop: '-283px'
-            }}>Contact</Button>
+            }} onClick={handleChange}>Contact</Button>
             <Button className='shadow bg-white' style={{
                 border: '0px', 
                 color: '#313131', 
@@ -97,6 +106,7 @@ let TherealHawkPub = () => {
                         }
                     />
                 </StreamApp>
+                <Chat socket={mainSocket} contactname='Julianne' contactrole='Hawker'></Chat>
       </div>
   
 

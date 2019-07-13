@@ -11,7 +11,7 @@ import therealHawkPub from '../Hawker/therealHawkPub.js';
 
 let InvestOpp = (props) => {
 
-  let mainSocket = io('localhost:8080')
+  let mainSocket = io('http://10.143.74.5:8080')
 
   let [hawkerstalls, setHawkerStalls] = useState(props.hawkerstalls)
 
@@ -72,7 +72,7 @@ let InvestOpp = (props) => {
         <Panel id='lastpanel' hawkprofpic={laksa} comname='Voluptate Inventore' abc='page' description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam voluptate inventore provident esse? Dolorem quo, numquam beatae, sed totam, repellat dolorum incidunt voluptatem cupiditate odit ullam quia iusto laboriosam dignissimos. Tempore distinctio in repudiandae ex iste, sequi nostrum qui a et, ipsum, officiis atque tenetur quod doloribus! Eum quisquam enim laboriosam dolorem odit earum aspernatur impedit numquam similique amet laborum cumque, nemo expedita optio id possimus animi commodi architecto beatae quidem. Dolor vel neque sit. Voluptas, quod aperiam! Facere reprehenderit in sit dicta architecto. Ipsam natus quos, odio delectus esse corporis inventore a similique totam at ullam ut fuga.'></Panel> */}
           
         </div>
-        <Chat socket={mainSocket} contactname='Harry' contactrole='Hawker'></Chat>
+        <Chat socket={mainSocket} contactname='Julianne' contactrole='Hawker'></Chat>
       </main>
       </div>
       </div>

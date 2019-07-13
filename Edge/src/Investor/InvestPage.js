@@ -11,7 +11,7 @@ import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom
 
 let InvestPage = (props) => {
 
-  let mainSocket = io('localhost:8080')
+  let mainSocket = io('http://10.143.74.5:8080')
 
   let [reDirect, setreDirect] = useState(false)
 
@@ -37,8 +37,8 @@ let InvestPage = (props) => {
             <Button className='btn shadow bg-white' style={{
               borderRadius: '50%', 
               float: 'left',
-              marginLeft: '70px', 
-              marginTop: '-210px',
+              marginLeft: '80px', 
+              marginTop: '-176px',
               width: '70px', 
               border: '0px', 
               position: 'fixed', 
@@ -67,7 +67,7 @@ let InvestPage = (props) => {
               <SMECard smeprofilepic={laksa} SMEname='Lorem Ipsum' sharepercent='15'></SMECard>
             </Jumbotron>
           {/* <InvestTabs firstTitle='Investments' secondtitle='Funds'></InvestTabs> */}
-          <Chat socket={mainSocket} contactname='Harry' contactrole='Hawker'></Chat>
+          <Chat socket={mainSocket} contactname='Julianne' contactrole='Hawker'></Chat>
         </main>
         </div>
         </div>

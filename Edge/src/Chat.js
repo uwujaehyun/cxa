@@ -8,7 +8,7 @@ let Chat = (props) => {
 
   
     console.log(props.socket)
-    let [ user, setUser ] = useState('Jerry')
+    let [ user, setUser ] = useState('Larry')
     // let [toggleWidget, setToggleWidget] = useState(false)
     useEffect(() => {
         props.socket.on('RECEIVE_MESSAGE', function(data) {
