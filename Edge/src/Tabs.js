@@ -1,12 +1,27 @@
-import React from 'react';
+import React , {useState, useEffect} from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
 import PublicHawk from './Hawker/PublicHawk.js';
 import PrivateHawk from './Hawker/PrivateHawk.js';
 import FundsHawk from './Hawker/FundsHawk.js';
 import Prospectus from './Hawker/Prospectus.js';
 import Offers from './Offers.js';
-
+import io from 'socket.io-client';
 let HawkTabs = (props) => {
+
+    let mainSocket = io('localhost:8080')
+
+    let [offerList, setOfferList ] = useState([])
+
+    useEffect(()=> {
+        mainSocket.on('RECEIVE_OFFER', function(data) {
+            console.log(data)
+            setOfferList(offerlst => [...offerlst,data])
+            
+        });
+
+        return ()=> {mainSocket.close()}
+    },[])
+
     return (
         <div className='shadow bg-white' style={{
             marginLeft: '168px', 
@@ -40,7 +55,7 @@ let HawkTabs = (props) => {
                 color: '#4b4b4b', 
                 width: '1100px'
             }}>
-                <Offers />
+                {offerList.map( (elem,id) => <Offers key={id} dets={elem}/>)}
             </Tab>
             </Tabs>
         </div>

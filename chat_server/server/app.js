@@ -22,5 +22,10 @@ io.on('connection', (socket) => {
         console.log(socket.id)
         io.emit('TRIGGER', data);
     })
+    socket.on("SEND_OFFER", function(data) {
+        console.log(data,".")
+        console.log(socket.id)
+        io.emit("RECEIVE_OFFER",data)
+    })
 });
 
