@@ -38,7 +38,7 @@ let PageRouter = (props) => {
         
           <Navbar expand="lg" id="hawker-nav" style={ { position: 'fixed', width: '100%', zIndex:500} }>
             <Navbar.Brand id="hawker-title"><Link to='/' className='nav-link' style={{
-              color: 'white'
+              color: '#313131'
             }}>UpLift</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
