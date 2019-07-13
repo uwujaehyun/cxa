@@ -11,10 +11,11 @@ import { Button } from 'react-bootstrap';
 import HawkButton from './HawkButton.js';
 import therealHawkPub from './therealHawkPub.js';
 import { TransactionContract } from "../setup";
+import sbkpic from '../assets/sbkpic.jpg'
 
 let HawkPage = (props) => {
 
-  let mySocket = io('http://10.143.74.5:8080')
+  let mySocket = io('localhost:8080')
 
   
   useEffect(()=>{
@@ -49,7 +50,7 @@ let HawkPage = (props) => {
       <Contacts pageWrapId={"page-wrap"} outerContainerId={"App"} contactname='Jerry' contactname2='Larry' contactname3='Barry'/>
       <div id="page-wrap">
       <HawkerJumbotron comname="Swee Boon Keat's Chicken Rice" 
-      profilepic={laksa} 
+      profilepic={sbkpic} 
       role='Hawker'
       bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>
       <Description description='This stall has been running for almost seven decades. Running and maintaining a hawker stall is a family business which my parents had started in the 1950s when hawker centres started to appear on the streets of Singapore. The reason I am this is skilled is because my parents taught me how to cook chicken rice as they do as I was growing up, and I have taught my children how to cook chicken rice professionally like my parents before me. We sell chicken rice at $2.70, steamed vegetables at $3.00, almond milk at $0.90, barley drink at $0.70, milo at $1.30, sugarcane drink at $1.10'></Description>

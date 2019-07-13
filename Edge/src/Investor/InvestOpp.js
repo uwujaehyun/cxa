@@ -11,7 +11,7 @@ import therealHawkPub from '../Hawker/therealHawkPub.js';
 
 let InvestOpp = (props) => {
 
-  let mainSocket = io('http://10.143.74.5:8080')
+  let mainSocket = io('localhost:8080')
 
   let [hawkerstalls, setHawkerStalls] = useState(props.hawkerstalls)
 

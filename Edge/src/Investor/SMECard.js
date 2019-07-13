@@ -6,7 +6,7 @@ import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom
 
 let InvestCard = (props) => {
 
-    let mainSocket = io('http://10.143.74.5:8080')
+    let mainSocket = io('localhost:8080')
 
     let handleChange = () => {
         console.log(mainSocket)
@@ -48,7 +48,7 @@ let InvestCard = (props) => {
                     margin: '5px'
                 }} onClick={() => {
                     setreDirect(true)
-                    setreDirectState('./julhawkpub')
+                    setreDirectState('./therealHawkPub')
                 }}>View Page</Button>
             </Card.Body>
             </Card>

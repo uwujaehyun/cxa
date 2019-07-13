@@ -22,7 +22,7 @@ import rojak from './assets/rojak.jpg';
 
 let PageRouter = (props) => {
 
-    let mainSocket = io('http://10.143.74.5:8080')
+    let mainSocket = io('localhost:8080')
     
     // let [userState , setUserState] = useState("Hawker")
     
@@ -38,7 +38,7 @@ let PageRouter = (props) => {
         
           <Navbar expand="lg" id="hawker-nav" style={ { position: 'fixed', width: '100%', zIndex:500} }>
             <Navbar.Brand id="hawker-title"><Link to='/' className='nav-link' style={{
-              color: '#313131'
+              color: 'white'
             }}>UpLift</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

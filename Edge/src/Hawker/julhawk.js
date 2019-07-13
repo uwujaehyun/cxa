@@ -14,7 +14,7 @@ import { TransactionContract } from "../setup";
 
 let Jul = (props) => {
 
-  let mySocket = io('http://10.143.74.5:8080')
+  let mySocket = io('localhost:8080')
 
   
   useEffect(()=>{

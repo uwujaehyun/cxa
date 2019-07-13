@@ -30,7 +30,8 @@ let HawkerJumbotron = (props) => {
                     border: '6px solid white', 
                     borderRadius: '50%', 
                     width: '120px', 
-                    height: 'auto',
+                    height: '120px',
+                    objectFit: 'cover', 
                     marginRight: '100px',
                     marginTop: '-60px',
                     float: 'right'
