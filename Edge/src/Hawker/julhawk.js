@@ -12,7 +12,7 @@ import HawkButton from './HawkButton.js';
 import therealHawkPub from './therealHawkPub.js';
 import { TransactionContract } from "../setup";
 
-let HawkPage = (props) => {
+let Jul = (props) => {
 
   let mySocket = io('http://10.143.74.5:8080')
 
@@ -100,4 +100,4 @@ let HawkPage = (props) => {
   )
 }
 }
-export default HawkPage;
+export default Jul;

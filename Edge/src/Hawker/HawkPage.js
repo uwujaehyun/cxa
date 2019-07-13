@@ -48,7 +48,7 @@ let HawkPage = (props) => {
       <div>
       <Contacts pageWrapId={"page-wrap"} outerContainerId={"App"} contactname='Jerry' contactname2='Larry' contactname3='Barry'/>
       <div id="page-wrap">
-      <HawkerJumbotron comname="Swee Boon Keat's chicken rice" 
+      <HawkerJumbotron comname="Swee Boon Keat's Chicken Rice" 
       profilepic={laksa} 
       role='Hawker'
       bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>
@@ -87,7 +87,7 @@ let HawkPage = (props) => {
         <HawkTabs style={{
           width: '1100px'
         }}></HawkTabs>
-        <Chat socket={mySocket} contactname='Julianne' contactrole='Investor'></Chat>
+        <Chat socket={mySocket} contactname='Jerry McCarthy' contactrole='Investor'></Chat>
       </main>
       </div>
       </div>

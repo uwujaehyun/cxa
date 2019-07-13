@@ -64,7 +64,7 @@ let InvestPage = (props) => {
                   paddingRight: '15px', 
                   marginTop: '-40px'
               }}>Investments</h3>
-              <SMECard smeprofilepic={laksa} SMEname='Lorem Ipsum' sharepercent='15'></SMECard>
+              <SMECard smeprofilepic={laksa} SMEname="Julianne's laksa" amount='2000'></SMECard>
             </Jumbotron>
           {/* <InvestTabs firstTitle='Investments' secondtitle='Funds'></InvestTabs> */}
           <Chat socket={mainSocket} contactname='Julianne' contactrole='Hawker'></Chat>

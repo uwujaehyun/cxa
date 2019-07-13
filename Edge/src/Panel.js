@@ -29,9 +29,10 @@ import { Route, Link, BrowserRouter as Router , Redirect} from 'react-router-dom
                     }}>
                         <img src={`${props.hawkprofpic}`} alt="Hawker's profile picture" style={{
                             width: '220px', 
-                            height: '100%', 
+                            height: '180px', 
                             float: 'left', 
-                            marginRight: '20px'
+                            marginRight: '20px',
+                            objectFit: "cover",
                         }}></img>
                         <h3>{props.comname}</h3>
                         <p style={{

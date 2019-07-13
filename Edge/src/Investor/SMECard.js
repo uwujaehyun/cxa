@@ -29,8 +29,8 @@ let InvestCard = (props) => {
             <Card.Img variant="top" src={`${props.smeprofilepic}`} />
             <Card.Body>
                 <Card.Title>{props.SMEname}</Card.Title>
-                <Card.Text>Share: 
-                {` ${props.sharepercent}` + '%'}
+                <Card.Text>Amount Invested: 
+                {` $${props.amount}`}
                 </Card.Text>
                 <Button className='inline' style={{
                     backgroundColor: '#009a7a', 
@@ -48,7 +48,7 @@ let InvestCard = (props) => {
                     margin: '5px'
                 }} onClick={() => {
                     setreDirect(true)
-                    setreDirectState('./therealHawkPub')
+                    setreDirectState('./julhawkpub')
                 }}>View Page</Button>
             </Card.Body>
             </Card>

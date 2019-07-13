@@ -41,7 +41,7 @@ let TherealHawkPub = () => {
 
     return (
         <div style={{boxSizing: 'border-box', fontFamily: 'Verdana', backgroundColor: '#f6f6f6',zIndex: 0, position: 'relative',paddingTop:"90px"}}>
-            <HawkerJumbotron comname="Swee Boon Keat's chicken rice" role='Hawker' profilepic={laksa} bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>  
+            <HawkerJumbotron comname="Swee Boon Keat's Chicken Rice" role='Hawker' profilepic={laksa} bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>  
             <Description description='This stall has been running for almost seven decades. Running and maintaining a hawker stall is a family business which my parents had started in the 1950s when hawker centres started to appear on the streets of Singapore. The reason I am this is skilled is because my parents taught me how to cook chicken rice as they do as I was growing up, and I have taught my children how to cook chicken rice professionally like my parents before me. We sell chicken rice at $2.70, steamed vegetables at $3.00, almond milk at $0.90, barley drink at $0.70, milo at $1.30, sugarcane drink at $1.10'>
 
             </Description>
@@ -106,7 +106,7 @@ let TherealHawkPub = () => {
                         }
                     />
                 </StreamApp>
-                <Chat socket={mainSocket} contactname='Julianne' contactrole='Hawker'></Chat>
+                <Chat socket={mainSocket} contactname='Swee Boon Keat' contactrole='Hawker'></Chat>
       </div>
   
 

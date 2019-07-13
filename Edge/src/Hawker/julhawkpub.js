@@ -32,7 +32,7 @@ let JulPub = () => {
 
     return (
         <div style={{boxSizing: 'border-box', fontFamily: 'Verdana', backgroundColor: '#f6f6f6',zIndex: 0, position: 'relative',paddingTop:"90px"}}>
-            <HawkerJumbotron style={{height:"50px"}} comname='Ching Chong Laksa' role='Hawker' profilepic={laksa2} bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>  
+            <HawkerJumbotron style={{height:"50px"}} comname="Julianne's Laksa" role='Hawker' profilepic={laksa2} bgimg='https://media.licdn.com/dms/image/C561BAQHm1TXH3TKPXw/company-background_10000/0?e=2159024400&v=beta&t=uFwdkIxRHe5itM_5n0u7SuLByFbRWVe6obPGimhanUo'></HawkerJumbotron>  
             <Description style={{backgroundColor:"#d9fff4"}} description='Since 1984, this family has been selling laksa in the Bedok hawker centre. After much reconsideration with our family, we have decided that we would like to look into the topic of expanding this evergrowing business. Customers come to us everyday to praise us on our food, so we would like others to be able to taste our food and not just limit our laksa to those living in the east.'>
             </Description>
             <Button className='shadow bg-white' style={{
